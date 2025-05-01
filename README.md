@@ -38,6 +38,7 @@ The below steps explain how to train the retrieval in a way that replicates what
     - Replace /random/selection/path with the path to your random selection files
     - Replace /intermediate/file/path with the location you would like to store the partitioned radiative transfer output
 4. Run wrfToPamtra-random-3D.py once per NWP file: python3 rime_mode month day hour begin_row end_row wrfToPamtra-random-3D.py
+5. 
   
       
 
