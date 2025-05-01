@@ -7,11 +7,11 @@ from scipy import stats
 import numpy as np
 import netCDF4 as nc
 
-LES_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-LAM_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-random_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRF_pamtra_tb/"
+LES_data_path = "/path/to/LES"
+LAM_data_path = "/path/to/LAM"
+random_file_path = "/random/file/path"
 
-"""
+
 ### ---------- LES Model Random Selection --------------------------------------------------------------
 # Import NWP file with info on LWP and SWP
 fRad = nc.Dataset(LES_data_path+'wrfout_rad_d02_2020-03-13_12_00_00')
@@ -61,7 +61,7 @@ fWind.close()
 selected[hgt>0] = 0
 
 # Create output file
-fn = random_file_path + 'randomSelect3-13_test.nc'
+fn = random_file_path + 'randomSelect3-13.nc'
 ds = nc.Dataset(fn, 'w', format='NETCDF4')
 lon = ds.createDimension('lon', lon_in.shape[0])
 lat = ds.createDimension('lat', lon_in.shape[1])
@@ -72,7 +72,7 @@ lons[:] = lon_in
 lats[:] = lat_in
 select[:] = selected
 ds.close()
-"""
+
 ### ---------- LAM Model Random Selection File 1 --------------------------------------------------------------
 # Import NWP file with info on LWP and SWP
 from scipy import stats
@@ -123,7 +123,7 @@ fWind.close()
 selected[hgt>0] = 0
 
 # Create output file
-fn = random_file_path + 'randomSelect3-28_test.nc'
+fn = random_file_path + 'randomSelect3-28.nc'
 ds = nc.Dataset(fn, 'w', format='NETCDF4')
 lon = ds.createDimension('lon', lon_in.shape[0])
 lat = ds.createDimension('lat', lon_in.shape[1])
@@ -185,7 +185,7 @@ fWind.close()
 selected[hgt>0] = 0
 
 # Create output file
-fn = random_file_path + 'randomSelect4-10_test.nc'
+fn = random_file_path + 'randomSelect4-10.nc'
 ds = nc.Dataset(fn, 'w', format='NETCDF4')
 lon = ds.createDimension('lon', lon_in.shape[0])
 lat = ds.createDimension('lat', lon_in.shape[1])
@@ -247,7 +247,7 @@ fWind.close()
 selected[hgt>0] = 0
 
 # Create output file
-fn = random_file_path + 'randomSelect4-26_test.nc'
+fn = random_file_path + 'randomSelect4-26.nc'
 ds = nc.Dataset(fn, 'w', format='NETCDF4')
 lon = ds.createDimension('lon', lon_in.shape[0])
 lat = ds.createDimension('lat', lon_in.shape[1])
