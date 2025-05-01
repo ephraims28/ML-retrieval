@@ -27,8 +27,19 @@ Install PAMTRA (this is the radiative transfer model we use)
 - testing.ipynb: This file conducts model testing of the LWP and WVP retrievals
 
 ## Steps
-1. Run randomSelection.py
-    a.
+The below steps explain how to train the retrieval in a way that replicates what is described in Ephraim et al 2025
+1. In randomSelection.py
+    - Replace /NWP/data/path with the path to the NWP data files
+    - Replace /random/selection/path with the location you desire to store the random selection files
+    - Note, if running on your own data, you will likely have to modify the probability function (variable=prob) to get the desired distribution and number of training/test points
+2. Run randomSelection.py: python3 randomSelection.py
+3. In wrfToPamtra-random-3D.py
+    - Replace /NWP/data/path with the path to the NWP data files
+    - Replace /random/selection/path with the path to your random selection files
+    - Replace /intermediate/file/path with the location you would like to store the partitioned radiative transfer output
+4. Run wrfToPamtra-random-3D.py once per NWP file: python3 rime_mode month day hour begin_row end_row wrfToPamtra-random-3D.py
+  
+      
 
 
 
