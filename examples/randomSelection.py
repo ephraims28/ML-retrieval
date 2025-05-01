@@ -7,9 +7,9 @@ from scipy import stats
 import numpy as np
 import netCDF4 as nc
 
-LES_data_path = "/path/to/LES"
-LAM_data_path = "/path/to/LAM"
-random_file_path = "/random/file/path"
+LES_data_path = "/NWP/data/path"
+LAM_data_path = "/NWP/data/path"
+random_file_path = "/random/selection/path"
 
 
 ### ---------- LES Model Random Selection --------------------------------------------------------------
