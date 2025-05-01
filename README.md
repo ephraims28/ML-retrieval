@@ -1,2 +1,2 @@
-# bookish-fiesta
+# bookish
 A machine learning LWP/WVP retrieval based on the methods described in Ephraim et al 2025
