@@ -10,8 +10,8 @@ Install PAMTRA (this is the radiative transfer model we use)
 ## Steps
 1. Add all the files in the /examples folder in this repository into $HOME/pamtra/examples (this folder will be created when installing PAMTRA)
 2. Replace $HOME/lib/python/pyPamtra/core.py and $HOME/lib/python/pyPamtra/importer.py with the versions provided in the /pyPamtra folder in this repository
-- core.py is updated to include the WCR constants
-- core.py also has a
+  - core.py is updated to include the WCR constants
+  - core.py also has a
 
 
 
