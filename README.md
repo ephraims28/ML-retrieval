@@ -7,4 +7,12 @@ This README will describe the steps to create a LWP/WVP retrieval on your own ba
 Install PAMTRA (this is the radiative transfer model we use)
 - https://github.com/igmk/pamtra
 
+## Steps
+1. Add all the files in the /examples folder in this repository into $HOME/pamtra/examples (this folder will be created when installing PAMTRA)
+2. Replace $HOME/lib/python/pyPamtra/core.py and $HOME/lib/python/pyPamtra/importer.py with the versions provided in the /pyPamtra folder in this repository
+- core.py is updated to include the WCR constants
+- core.py also has a
+
+
+
 
