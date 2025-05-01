@@ -13,9 +13,10 @@ import netCDF4 as nc
 import sys
 
 
-NWP_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-random_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRF_pamtra_tb/"
-output_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_output_revision/"
+
+NWP_data_path = "/NWP/data/path"
+random_file_path = "/random/selection/path"
+output_file_path = "/intermediate/file/path"
 
 ### ----------------------------------------------------------
 # Get user input
@@ -115,7 +116,7 @@ for i in np.arange(begin,min(selected.shape[0],end),interval):
     lat_in = fWindData["XLAT"][0,i:i+interval,:].T
     
     # Set output file name
-    fn = output_file_path+'random_Mason' + mode +'Rime_'+str(month)+'-'+str(day)+'-'+str(hour)+'_3D_cut'+str(i)+'-'+str(i+interval)+'_test.nc'
+    fn = output_file_path+'random_Mason' + mode +'Rime_'+str(month)+'-'+str(day)+'-'+str(hour)+'_3D_cut'+str(i)+'-'+str(i+interval)+'.nc'
 
     # Save to netCDF
     ds = nc.Dataset(fn, 'w', format='NETCDF4')
@@ -150,7 +151,7 @@ for i in np.arange(begin,min(selected.shape[0],end),interval):
     ZeOut[ZeOut<=-40] = np.nan
 
     # Set output file name
-    fn = output_file_path+'random_95GHz_Mason' + mode +'Rime_'+str(month)+'-'+str(day)+'-'+str(hour)+'_3D_cut'+str(i)+'-'+str(i+interval)+'_test.nc'
+    fn = output_file_path+'random_95GHz_Mason' + mode +'Rime_'+str(month)+'-'+str(day)+'-'+str(hour)+'_3D_cut'+str(i)+'-'+str(i+interval)+'.nc'
     ds = nc.Dataset(fn, 'w', format='NETCDF4')
 
     lon = ds.createDimension('lon', ZeOut.shape[0])
