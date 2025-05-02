@@ -17,7 +17,7 @@ from sklearn.model_selection import RandomizedSearchCV
 # Get user input
 retrievalType = sys.argv[1] # LWP or WVP
 
-points_output_file_path = '/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_points_revision/'
+points_output_file_path = '/points/file/path'
 
 
 # Import training points from each model run
