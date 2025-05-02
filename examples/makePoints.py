@@ -8,9 +8,9 @@ import netCDF4 as nc
 import sys
 
 
-NWP_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-merged_output_file_path = '/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_combined_cuts/'
-points_output_file_path = '/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_points_revision/'
+NWP_data_path = "/NWP/data/path"
+merged_output_file_path = 'merged/file/path'
+points_output_file_path = 'points/file/path'
 
 # Helper function to find the index in an array that has a value closest to the target value  
 def find_nearest_idx(array, value):
