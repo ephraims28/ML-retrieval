@@ -54,6 +54,10 @@ The below steps explain how to train the retrieval in a way that replicates what
     - Replace /merged/file/path with the location of the merged radiative transfer output
     - Replace /points/file/path with the location you would like to store the values/points
 10. Run makePoints.py once per NWP file per riming type (points only need to be created once per NWP file; make_points=1): python3 makePoints.py rime_mode month day hour make_points
+11. In findHyperparameters.py and findHyperparametersRF.py
+    - Replace /points/file/path with the location of your values/points
+12. Run findHyperparameters.py and findHyperparametersRF.py once per retrieval type (LWP/WVP): python3 findHyperparameters.py retrieval_type
+13. 
       
 
 
