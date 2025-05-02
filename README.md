@@ -37,8 +37,18 @@ The below steps explain how to train the retrieval in a way that replicates what
     - Replace /NWP/data/path with the path to the NWP data files
     - Replace /random/selection/path with the path to your random selection files
     - Replace /intermediate/file/path with the location you would like to store the partitioned radiative transfer output
-4. Run wrfToPamtra-random-3D.py once per NWP file: python3 rime_mode month day hour begin_row end_row wrfToPamtra-random-3D.py
-5. 
+4. Run wrfToPamtra-random-3D.py once per NWP file per riming type (12 times, 3 riming types (Low, Normal, High) x 4 files (3 LAM + 1 LES): python3 wrfToPamtra-random-3D.py rime_mode month day hour begin_row end_row 
+5. In combineCuts-3D.py
+    - Replace /NWP/data/path with the path to the NWP data files
+    - Replace /intermediate/file/path with the location of the partitioned radiative transfer output
+    - Replace /merged/file/path with the location you would like to store the merged passive radiative transfer output
+6. Run combineCuts-3D.py once per NWP file per riming type: python3 combineCuts.py rime_mode month day hour
+7. In combineCuts-radar3D.py
+    - Replace /NWP/data/path with the path to the NWP data files
+    - Replace /intermediate/file/path with the location of the partitioned radiative transfer output
+    - Replace /merged/file/path with the location you would like to store the merged passive radiative transfer output
+    - Replace /random/selection/path with the path to your random selection files
+8. Run combineCuts-radar3D.py once per NWP file per riming type: python3 combineCuts-radar3D.py rime_mode month day hour
   
       
 
