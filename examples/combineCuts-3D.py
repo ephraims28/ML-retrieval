@@ -4,8 +4,6 @@ File used to combine seperate slices of the brightness temperature radiative tra
 """
 
 import os
-os.environ['OPENBLAS_NUM_THREADS'] = '1'
-
 import numpy as np # import numpy for arrays, numerical array operations, ....
 import netCDF4 as nc
 import sys
