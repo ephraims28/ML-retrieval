@@ -46,10 +46,14 @@ The below steps explain how to train the retrieval in a way that replicates what
 7. In combineCuts-radar3D.py
     - Replace /NWP/data/path with the path to the NWP data files
     - Replace /intermediate/file/path with the location of the partitioned radiative transfer output
-    - Replace /merged/file/path with the location you would like to store the merged passive radiative transfer output
+    - Replace /merged/file/path with the location you would like to store the merged active radiative transfer output
     - Replace /random/selection/path with the path to your random selection files
 8. Run combineCuts-radar3D.py once per NWP file per riming type: python3 combineCuts-radar3D.py rime_mode month day hour
-  
+9. In makePoints.py
+    - Replace /NWP/data/path with the path to the NWP data files
+    - Replace /merged/file/path with the location of the merged radiative transfer output
+    - Replace /points/file/path with the location you would like to store the values/points
+10. Run makePoints.py once per NWP file per riming type (points only need to be created once per NWP file; make_points=1): python3 makePoints.py rime_mode month day hour make_points
       
 
 
