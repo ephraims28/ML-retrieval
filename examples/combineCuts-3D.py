@@ -10,9 +10,9 @@ import numpy as np # import numpy for arrays, numerical array operations, ....
 import netCDF4 as nc
 import sys
 
-NWP_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-partitioned_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_output_revision/"
-merged_output_file_path = '/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_combined_cuts/'
+NWP_data_path = "/NWP/data/path"
+partitioned_file_path = "/intermediate/file/path"
+merged_output_file_path = '/merged/file/path'
 
 # Get user input
 mode = sys.argv[1] # Mode describes how rimed the ice particles are and is either "Normal", "High", or "Low", more details in Ephraim et al 2025
