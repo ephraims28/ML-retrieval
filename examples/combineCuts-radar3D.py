@@ -5,18 +5,15 @@ File used to combine seperate slices of the reflectivity radiative transfer simu
 
 
 import os
-os.environ['OPENBLAS_NUM_THREADS'] = '1'
-
-import pyPamtra  # import pyPamtra
 import numpy as np # import numpy for arrays, numerical array operations, ....
 import netCDF4 as nc
 import math
 import sys
 
-NWP_data_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRFout_revision/"
-partitioned_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_output_revision/"
-random_file_path = "/glade/derecho/scratch/ephraims/FROM_CHEYENNE/WRF_pamtra_tb/"
-merged_output_file_path = '/glade/derecho/scratch/ephraims/FROM_CHEYENNE/pamtra_combined_cuts/'
+NWP_data_path = "NWP/data/path"
+partitioned_file_path = "/intermediate/file/path"
+random_file_path = "random/selection/path"
+merged_output_file_path = 'merged/file/path'
 
 # Get user input
 mode = sys.argv[1] # Mode describes how rimed the ice particles are and is either "Normal", "High", or "Low", more details in Ephraim et al 2025
